@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Job from "./Job";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -37,7 +37,9 @@ const MainSearch = () => {
         <Col xs={10} className="mx-auto my-3">
           <h1 className="display-1">Remote Jobs Search</h1>
           <Link to="/ListaLavori">
-            <button className="btn text-light btn-info">vai alla lista ({jobsNumber})</button>
+            <Button className="text-light" variant="info">
+              vai alla lista ({jobsNumber})
+            </Button>
           </Link>
         </Col>
         <Col xs={10} className="mx-auto">

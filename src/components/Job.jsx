@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -18,9 +18,9 @@ const Job = ({ data }) => {
         <a href={data.url} target="_blank" rel="noreferrer">
           {data.title}
         </a>
-        <button className="btn text-light btn-info ms-2" onClick={() => dispatch({ type: "ADD_JOBS", payload: data })}>
+        <Button className="text-lightms-2" variant="info" onClick={() => dispatch({ type: "ADD_JOBS", payload: data })}>
           aggiungi
-        </button>
+        </Button>
       </Col>
     </Row>
   );
